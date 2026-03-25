@@ -1,8 +1,6 @@
 name: Update OpenAI Pricing
 
 on:
-  push:
-    branches: [ master, main ]
   schedule:
     - cron: '0 12 * * *'  # Run daily at 12:00 UTC
   workflow_dispatch:  # Allow manual trigger
