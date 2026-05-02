@@ -1,7 +1,7 @@
 {
   "gpt-5.5": {
     "model": "gpt-5.5",
-    "timestamp": "2026-05-01T12:14:18.971870+00:00",
+    "timestamp": "2026-05-02T12:12:28.643595+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -39,7 +39,7 @@
   },
   "gpt-5.5-pro": {
     "model": "gpt-5.5-pro",
-    "timestamp": "2026-05-01T12:14:18.972180+00:00",
+    "timestamp": "2026-05-02T12:12:28.643861+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -59,7 +59,7 @@
   },
   "gpt-5.4": {
     "model": "gpt-5.4",
-    "timestamp": "2026-05-01T12:14:18.972282+00:00",
+    "timestamp": "2026-05-02T12:12:28.643979+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -97,7 +97,7 @@
   },
   "gpt-5.4-pro": {
     "model": "gpt-5.4-pro",
-    "timestamp": "2026-05-01T12:14:18.972525+00:00",
+    "timestamp": "2026-05-02T12:12:28.644273+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -131,7 +131,7 @@
   },
   "gpt-realtime-1.5": {
     "model": "gpt-realtime-1.5",
-    "timestamp": "2026-05-01T12:14:18.977073+00:00",
+    "timestamp": "2026-05-02T12:12:28.649110+00:00",
     "tiers": {
       "priority": {
         "pricing_type": "per_1m_tokens",
@@ -153,7 +153,7 @@
   },
   "text": {
     "model": "Text",
-    "timestamp": "2026-05-01T12:14:18.977138+00:00",
+    "timestamp": "2026-05-02T12:12:28.649199+00:00",
     "tiers": {
       "priority": {
         "pricing_type": "per_1m_tokens",
@@ -184,7 +184,7 @@
   },
   "image": {
     "model": "Image",
-    "timestamp": "2026-05-01T12:14:18.977191+00:00",
+    "timestamp": "2026-05-02T12:12:28.649275+00:00",
     "tiers": {
       "priority": {
         "pricing_type": "per_1m_tokens",
@@ -202,7 +202,7 @@
   },
   "gpt-realtime-mini": {
     "model": "gpt-realtime-mini",
-    "timestamp": "2026-05-01T12:14:18.977248+00:00",
+    "timestamp": "2026-05-02T12:12:28.649352+00:00",
     "tiers": {
       "priority": {
         "pricing_type": "per_1m_tokens",
@@ -224,7 +224,7 @@
   },
   "gpt-image-2": {
     "model": "gpt-image-2",
-    "timestamp": "2026-05-01T12:14:18.978171+00:00",
+    "timestamp": "2026-05-02T12:12:28.650644+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -254,7 +254,7 @@
   },
   "gpt-image-1.5": {
     "model": "gpt-image-1.5",
-    "timestamp": "2026-05-01T12:14:18.978288+00:00",
+    "timestamp": "2026-05-02T12:12:28.650897+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -284,7 +284,7 @@
   },
   "gpt-image-1-mini": {
     "model": "gpt-image-1-mini",
-    "timestamp": "2026-05-01T12:14:18.978393+00:00",
+    "timestamp": "2026-05-02T12:12:28.651044+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -314,7 +314,7 @@
   },
   "sora-2": {
     "model": "sora-2",
-    "timestamp": "2026-05-01T12:14:18.980607+00:00",
+    "timestamp": "2026-05-02T12:12:28.653461+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_second",
@@ -338,7 +338,7 @@
   },
   "sora-2-pro": {
     "model": "sora-2-pro",
-    "timestamp": "2026-05-01T12:14:18.980670+00:00",
+    "timestamp": "2026-05-02T12:12:28.653558+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_second",
@@ -362,7 +362,7 @@
   },
   "gpt-4o-transcribe": {
     "model": "gpt-4o-transcribe",
-    "timestamp": "2026-05-01T12:14:18.983196+00:00",
+    "timestamp": "2026-05-02T12:12:28.656142+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -382,7 +382,7 @@
   },
   "gpt-4o-mini-transcribe": {
     "model": "gpt-4o-mini-transcribe",
-    "timestamp": "2026-05-01T12:14:18.983301+00:00",
+    "timestamp": "2026-05-02T12:12:28.656261+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -402,7 +402,7 @@
   },
   "chatgpt": {
     "model": "ChatGPT",
-    "timestamp": "2026-05-01T12:14:18.986778+00:00",
+    "timestamp": "2026-05-02T12:12:28.658714+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -424,7 +424,7 @@
   },
   "codex": {
     "model": "Codex",
-    "timestamp": "2026-05-01T12:14:18.986887+00:00",
+    "timestamp": "2026-05-02T12:12:28.658807+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -454,7 +454,7 @@
   },
   "deep-research": {
     "model": "Deep research",
-    "timestamp": "2026-05-01T12:14:18.988668+00:00",
+    "timestamp": "2026-05-02T12:12:28.659977+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -474,7 +474,7 @@
   },
   "o4-mini-deep-research": {
     "model": "o4-mini-deep-research",
-    "timestamp": "2026-05-01T12:14:18.988770+00:00",
+    "timestamp": "2026-05-02T12:12:28.660062+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "unknown",
@@ -492,7 +492,7 @@
   },
   "computer-use": {
     "model": "Computer use",
-    "timestamp": "2026-05-01T12:14:18.988854+00:00",
+    "timestamp": "2026-05-02T12:12:28.660142+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -512,7 +512,7 @@
   },
   "o4-mini-2025-04-16": {
     "model": "o4-mini-2025-04-16",
-    "timestamp": "2026-05-01T12:14:18.992354+00:00",
+    "timestamp": "2026-05-02T12:12:28.662402+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -542,7 +542,7 @@
   },
   "o4-mini-2025-04-16with-data-sharing": {
     "model": "o4-mini-2025-04-16with data sharing",
-    "timestamp": "2026-05-01T12:14:18.992452+00:00",
+    "timestamp": "2026-05-02T12:12:28.662491+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
