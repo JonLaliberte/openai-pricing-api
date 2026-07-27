@@ -1,5 +1,836 @@
 [
   {
+    "date": "2026-07-27",
+    "timestamp": "2026-07-27T14:05:38.393057+00:00",
+    "models": {
+      "gpt-5.6-sol": {
+        "model": "gpt-5.6-sol",
+        "timestamp": "2026-07-27T14:05:38.345175+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 45.0,
+            "cached_input": 10.0,
+            "output": 12.5
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0,
+            "output": 6.25
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0,
+            "output": 6.25
+          },
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 12.5,
+            "cached_input": 60.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 45.0,
+        "output": 12.5,
+        "cached_input": 10.0
+      },
+      "gpt-5.6-terra": {
+        "model": "gpt-5.6-terra",
+        "timestamp": "2026-07-27T14:05:38.345523+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0,
+            "output": 6.25
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 11.25,
+            "cached_input": 2.5,
+            "output": 3.125
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 11.25,
+            "cached_input": 2.5,
+            "output": 3.125
+          },
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 6.25,
+            "cached_input": 30.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 22.5,
+        "output": 6.25,
+        "cached_input": 5.0
+      },
+      "gpt-5.6-luna": {
+        "model": "gpt-5.6-luna",
+        "timestamp": "2026-07-27T14:05:38.345633+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 9.0,
+            "cached_input": 2.0,
+            "output": 2.5
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 4.5,
+            "cached_input": 1.0,
+            "output": 1.25
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 4.5,
+            "cached_input": 1.0,
+            "output": 1.25
+          },
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 2.5,
+            "cached_input": 12.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 9.0,
+        "output": 2.5,
+        "cached_input": 2.0
+      },
+      "gpt-5.5": {
+        "model": "gpt-5.5",
+        "timestamp": "2026-07-27T14:05:38.345728+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 45.0,
+            "cached_input": 10.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0
+          },
+          "priority": {
+            "pricing_type": "unknown",
+            "category": "language_model",
+            "cached_input": 75.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 45.0,
+        "cached_input": 10.0
+      },
+      "gpt-5.5-pro": {
+        "model": "gpt-5.5-pro",
+        "timestamp": "2026-07-27T14:05:38.345823+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 270.0,
+            "cached_input": 60.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 90.0
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 90.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 270.0,
+        "cached_input": 60.0
+      },
+      "gpt-5.4": {
+        "model": "gpt-5.4",
+        "timestamp": "2026-07-27T14:05:38.345920+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 22.5,
+            "cached_input": 5.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 11.25,
+            "cached_input": 2.5
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 11.25,
+            "cached_input": 2.5
+          },
+          "priority": {
+            "pricing_type": "unknown",
+            "category": "language_model",
+            "cached_input": 30.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 22.5,
+        "cached_input": 5.0
+      },
+      "gpt-5.4-mini": {
+        "model": "gpt-5.4-mini",
+        "timestamp": "2026-07-27T14:05:38.346006+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 4.5
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 2.25
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 2.25
+          },
+          "priority": {
+            "pricing_type": "unknown",
+            "category": "language_model",
+            "cached_input": 9.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 4.5
+      },
+      "gpt-5.4-nano": {
+        "model": "gpt-5.4-nano",
+        "timestamp": "2026-07-27T14:05:38.346130+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 1.25
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 0.625
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 0.625
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 1.25
+      },
+      "gpt-5.4-pro": {
+        "model": "gpt-5.4-pro",
+        "timestamp": "2026-07-27T14:05:38.346323+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 270.0,
+            "cached_input": 60.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 135.0,
+            "cached_input": 30.0
+          },
+          "flex": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 135.0,
+            "cached_input": 30.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "flex"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 270.0,
+        "cached_input": 60.0
+      },
+      "gpt-realtime-2.1": {
+        "model": "gpt-realtime-2.1",
+        "timestamp": "2026-07-27T14:05:38.352651+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 32.0,
+            "cached_input": 0.4,
+            "output": 64.0
+          }
+        },
+        "default_tier": "priority",
+        "available_tiers": [
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 32.0,
+        "output": 64.0,
+        "cached_input": 0.4
+      },
+      "text": {
+        "model": "Text",
+        "timestamp": "2026-07-27T14:05:38.352727+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 0.06,
+            "cached_input": 2.4
+          },
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 0.2
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 0.1
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 0.2
+      },
+      "image": {
+        "model": "Image",
+        "timestamp": "2026-07-27T14:05:38.352814+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 0.08
+          }
+        },
+        "default_tier": "priority",
+        "available_tiers": [
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 0.08
+      },
+      "gpt-realtime-2.1-mini": {
+        "model": "gpt-realtime-2.1-mini",
+        "timestamp": "2026-07-27T14:05:38.352879+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 10.0,
+            "cached_input": 0.3,
+            "output": 20.0
+          }
+        },
+        "default_tier": "priority",
+        "available_tiers": [
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 10.0,
+        "output": 20.0,
+        "cached_input": 0.3
+      },
+      "gpt-realtime-translate": {
+        "model": "gpt-realtime-translate",
+        "timestamp": "2026-07-27T14:05:38.353133+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "output": 0.034
+          }
+        },
+        "default_tier": "priority",
+        "available_tiers": [
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "output": 0.034
+      },
+      "gpt-realtime-whisper": {
+        "model": "gpt-realtime-whisper",
+        "timestamp": "2026-07-27T14:05:38.353254+00:00",
+        "tiers": {
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "audio_transcription",
+            "output": 0.017
+          }
+        },
+        "default_tier": "priority",
+        "available_tiers": [
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "audio_transcription",
+        "output": 0.017
+      },
+      "gpt-image-2": {
+        "model": "gpt-image-2",
+        "timestamp": "2026-07-27T14:05:38.354328+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 8.0,
+            "cached_input": 2.0,
+            "output": 30.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 4.0,
+            "cached_input": 1.0,
+            "output": 15.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "image_generation_token",
+        "input": 8.0,
+        "output": 30.0,
+        "cached_input": 2.0
+      },
+      "gpt-image-1.5": {
+        "model": "gpt-image-1.5",
+        "timestamp": "2026-07-27T14:05:38.354451+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 8.0,
+            "cached_input": 2.0,
+            "output": 32.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 4.0,
+            "cached_input": 1.0,
+            "output": 16.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "image_generation_token",
+        "input": 8.0,
+        "output": 32.0,
+        "cached_input": 2.0
+      },
+      "gpt-image-1-mini": {
+        "model": "gpt-image-1-mini",
+        "timestamp": "2026-07-27T14:05:38.354556+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 2.5,
+            "cached_input": 0.25,
+            "output": 8.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "image_generation_token",
+            "input": 1.25,
+            "cached_input": 0.13,
+            "output": 4.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "image_generation_token",
+        "input": 2.5,
+        "output": 8.0,
+        "cached_input": 0.25
+      },
+      "sora-2": {
+        "model": "sora-2",
+        "timestamp": "2026-07-27T14:05:38.356635+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_second",
+            "category": "video_generation",
+            "price": 0.1
+          },
+          "batch": {
+            "pricing_type": "per_second",
+            "category": "video_generation",
+            "price": 0.05
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_second",
+        "category": "video_generation",
+        "price": 0.1
+      },
+      "sora-2-pro": {
+        "model": "sora-2-pro",
+        "timestamp": "2026-07-27T14:05:38.356697+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_second",
+            "category": "video_generation",
+            "price": 0.3
+          },
+          "batch": {
+            "pricing_type": "per_second",
+            "category": "video_generation",
+            "price": 0.15
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_second",
+        "category": "video_generation",
+        "price": 0.3
+      },
+      "gpt-4o-transcribe": {
+        "model": "gpt-4o-transcribe",
+        "timestamp": "2026-07-27T14:05:38.359090+00:00",
+        "tiers": {
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 2.5,
+            "output": 10.0
+          }
+        },
+        "default_tier": "batch",
+        "available_tiers": [
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 2.5,
+        "output": 10.0
+      },
+      "gpt-4o-mini-transcribe": {
+        "model": "gpt-4o-mini-transcribe",
+        "timestamp": "2026-07-27T14:05:38.359161+00:00",
+        "tiers": {
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "language_model",
+            "input": 1.25,
+            "output": 5.0
+          }
+        },
+        "default_tier": "batch",
+        "available_tiers": [
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "language_model",
+        "input": 1.25,
+        "output": 5.0
+      },
+      "chatgpt": {
+        "model": "ChatGPT",
+        "timestamp": "2026-07-27T14:05:38.361321+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 5.0,
+            "cached_input": 0.5,
+            "output": 30.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 5.0,
+        "output": 30.0,
+        "cached_input": 0.5
+      },
+      "codex": {
+        "model": "Codex",
+        "timestamp": "2026-07-27T14:05:38.361390+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 1.75,
+            "cached_input": 0.175,
+            "output": 14.0
+          },
+          "priority": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 3.5,
+            "cached_input": 0.35,
+            "output": 28.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "priority"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 1.75,
+        "output": 14.0,
+        "cached_input": 0.175
+      },
+      "deep-research": {
+        "model": "Deep research",
+        "timestamp": "2026-07-27T14:05:38.362545+00:00",
+        "tiers": {
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 5.0,
+            "output": 20.0
+          }
+        },
+        "default_tier": "batch",
+        "available_tiers": [
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 5.0,
+        "output": 20.0
+      },
+      "o4-mini-deep-research": {
+        "model": "o4-mini-deep-research",
+        "timestamp": "2026-07-27T14:05:38.362610+00:00",
+        "tiers": {
+          "batch": {
+            "pricing_type": "unknown",
+            "category": "other",
+            "cached_input": 4.0
+          }
+        },
+        "default_tier": "batch",
+        "available_tiers": [
+          "batch"
+        ],
+        "pricing_type": "unknown",
+        "category": "other",
+        "cached_input": 4.0
+      },
+      "computer-use": {
+        "model": "Computer use",
+        "timestamp": "2026-07-27T14:05:38.362662+00:00",
+        "tiers": {
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 1.5,
+            "output": 6.0
+          }
+        },
+        "default_tier": "batch",
+        "available_tiers": [
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 1.5,
+        "output": 6.0
+      },
+      "o4-mini-2025-04-16": {
+        "model": "o4-mini-2025-04-16",
+        "timestamp": "2026-07-27T14:05:38.365087+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 4.0,
+            "cached_input": 1.0,
+            "output": 16.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 2.0,
+            "cached_input": 0.5,
+            "output": 8.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 4.0,
+        "output": 16.0,
+        "cached_input": 1.0
+      },
+      "o4-mini-2025-04-16with-data-sharing": {
+        "model": "o4-mini-2025-04-16with data sharing",
+        "timestamp": "2026-07-27T14:05:38.365173+00:00",
+        "tiers": {
+          "standard": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 2.0,
+            "cached_input": 0.5,
+            "output": 8.0
+          },
+          "batch": {
+            "pricing_type": "per_1m_tokens",
+            "category": "other",
+            "input": 1.0,
+            "cached_input": 0.25,
+            "output": 4.0
+          }
+        },
+        "default_tier": "standard",
+        "available_tiers": [
+          "standard",
+          "batch"
+        ],
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 2.0,
+        "output": 8.0,
+        "cached_input": 0.5
+      }
+    },
+    "models_count": 29
+  },
+  {
     "date": "2026-07-26",
     "timestamp": "2026-07-26T12:52:12.574058+00:00",
     "models": {
@@ -57336,584 +58167,6 @@
       "o4-mini-2025-04-16with-data-sharing": {
         "model": "o4-mini-2025-04-16with data sharing",
         "timestamp": "2026-04-29T12:25:16.845003+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 2.0,
-            "cached_input": 0.5,
-            "output": 8.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 1.0,
-            "cached_input": 0.25,
-            "output": 4.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 2.0,
-        "output": 8.0,
-        "cached_input": 0.5
-      }
-    },
-    "models_count": 22
-  },
-  {
-    "date": "2026-04-28",
-    "timestamp": "2026-04-28T12:29:09.560998+00:00",
-    "models": {
-      "gpt-5.5": {
-        "model": "gpt-5.5",
-        "timestamp": "2026-04-28T12:29:09.535489+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 10.0,
-            "cached_input": 1.0,
-            "output": 45.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 5.0,
-            "cached_input": 0.5,
-            "output": 22.5
-          },
-          "flex": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 5.0,
-            "cached_input": 0.5,
-            "output": 22.5
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch",
-          "flex"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 10.0,
-        "output": 45.0,
-        "cached_input": 1.0
-      },
-      "gpt-5.5-pro": {
-        "model": "gpt-5.5-pro",
-        "timestamp": "2026-04-28T12:29:09.535790+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 60.0,
-            "output": 270.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 60.0,
-        "output": 270.0
-      },
-      "gpt-5.4": {
-        "model": "gpt-5.4",
-        "timestamp": "2026-04-28T12:29:09.535911+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 5.0,
-            "cached_input": 0.5,
-            "output": 22.5
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 2.5,
-            "cached_input": 0.25,
-            "output": 11.25
-          },
-          "flex": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 2.5,
-            "cached_input": 0.25,
-            "output": 11.25
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch",
-          "flex"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 5.0,
-        "output": 22.5,
-        "cached_input": 0.5
-      },
-      "gpt-5.4-pro": {
-        "model": "gpt-5.4-pro",
-        "timestamp": "2026-04-28T12:29:09.536240+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 60.0,
-            "output": 270.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 30.0,
-            "output": 135.0
-          },
-          "flex": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 30.0,
-            "output": 135.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch",
-          "flex"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 60.0,
-        "output": 270.0
-      },
-      "gpt-realtime-1.5": {
-        "model": "gpt-realtime-1.5",
-        "timestamp": "2026-04-28T12:29:09.541199+00:00",
-        "tiers": {
-          "priority": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 32.0,
-            "cached_input": 0.4,
-            "output": 64.0
-          }
-        },
-        "default_tier": "priority",
-        "available_tiers": [
-          "priority"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 32.0,
-        "output": 64.0,
-        "cached_input": 0.4
-      },
-      "text": {
-        "model": "Text",
-        "timestamp": "2026-04-28T12:29:09.541284+00:00",
-        "tiers": {
-          "priority": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 0.06,
-            "cached_input": 2.4
-          },
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 0.2
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 0.1
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch",
-          "priority"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 0.2
-      },
-      "image": {
-        "model": "Image",
-        "timestamp": "2026-04-28T12:29:09.541357+00:00",
-        "tiers": {
-          "priority": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 0.08
-          }
-        },
-        "default_tier": "priority",
-        "available_tiers": [
-          "priority"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 0.08
-      },
-      "gpt-realtime-mini": {
-        "model": "gpt-realtime-mini",
-        "timestamp": "2026-04-28T12:29:09.541430+00:00",
-        "tiers": {
-          "priority": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 10.0,
-            "cached_input": 0.3,
-            "output": 20.0
-          }
-        },
-        "default_tier": "priority",
-        "available_tiers": [
-          "priority"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 10.0,
-        "output": 20.0,
-        "cached_input": 0.3
-      },
-      "gpt-image-2": {
-        "model": "gpt-image-2",
-        "timestamp": "2026-04-28T12:29:09.542435+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 8.0,
-            "cached_input": 2.0,
-            "output": 30.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 4.0,
-            "cached_input": 1.0,
-            "output": 15.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "image_generation_token",
-        "input": 8.0,
-        "output": 30.0,
-        "cached_input": 2.0
-      },
-      "gpt-image-1.5": {
-        "model": "gpt-image-1.5",
-        "timestamp": "2026-04-28T12:29:09.542600+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 8.0,
-            "cached_input": 2.0,
-            "output": 32.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 4.0,
-            "cached_input": 1.0,
-            "output": 16.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "image_generation_token",
-        "input": 8.0,
-        "output": 32.0,
-        "cached_input": 2.0
-      },
-      "gpt-image-1-mini": {
-        "model": "gpt-image-1-mini",
-        "timestamp": "2026-04-28T12:29:09.542753+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 2.5,
-            "cached_input": 0.25,
-            "output": 8.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "image_generation_token",
-            "input": 1.25,
-            "cached_input": 0.13,
-            "output": 4.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "image_generation_token",
-        "input": 2.5,
-        "output": 8.0,
-        "cached_input": 0.25
-      },
-      "sora-2": {
-        "model": "sora-2",
-        "timestamp": "2026-04-28T12:29:09.545137+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_second",
-            "category": "video_generation",
-            "price": 0.1
-          },
-          "batch": {
-            "pricing_type": "per_second",
-            "category": "video_generation",
-            "price": 0.05
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_second",
-        "category": "video_generation",
-        "price": 0.1
-      },
-      "sora-2-pro": {
-        "model": "sora-2-pro",
-        "timestamp": "2026-04-28T12:29:09.545227+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_second",
-            "category": "video_generation",
-            "price": 0.3
-          },
-          "batch": {
-            "pricing_type": "per_second",
-            "category": "video_generation",
-            "price": 0.15
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_second",
-        "category": "video_generation",
-        "price": 0.3
-      },
-      "gpt-4o-transcribe": {
-        "model": "gpt-4o-transcribe",
-        "timestamp": "2026-04-28T12:29:09.547837+00:00",
-        "tiers": {
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 2.5,
-            "output": 10.0
-          }
-        },
-        "default_tier": "batch",
-        "available_tiers": [
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 2.5,
-        "output": 10.0
-      },
-      "gpt-4o-mini-transcribe": {
-        "model": "gpt-4o-mini-transcribe",
-        "timestamp": "2026-04-28T12:29:09.547974+00:00",
-        "tiers": {
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "language_model",
-            "input": 1.25,
-            "output": 5.0
-          }
-        },
-        "default_tier": "batch",
-        "available_tiers": [
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "language_model",
-        "input": 1.25,
-        "output": 5.0
-      },
-      "chatgpt": {
-        "model": "ChatGPT",
-        "timestamp": "2026-04-28T12:29:09.550463+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 1.75,
-            "cached_input": 0.175,
-            "output": 14.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 1.75,
-        "output": 14.0,
-        "cached_input": 0.175
-      },
-      "codex": {
-        "model": "Codex",
-        "timestamp": "2026-04-28T12:29:09.550558+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 1.75,
-            "cached_input": 0.175,
-            "output": 14.0
-          },
-          "priority": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 3.5,
-            "cached_input": 0.35,
-            "output": 28.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "priority"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 1.75,
-        "output": 14.0,
-        "cached_input": 0.175
-      },
-      "deep-research": {
-        "model": "Deep research",
-        "timestamp": "2026-04-28T12:29:09.551719+00:00",
-        "tiers": {
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 5.0,
-            "output": 20.0
-          }
-        },
-        "default_tier": "batch",
-        "available_tiers": [
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 5.0,
-        "output": 20.0
-      },
-      "o4-mini-deep-research": {
-        "model": "o4-mini-deep-research",
-        "timestamp": "2026-04-28T12:29:09.551805+00:00",
-        "tiers": {
-          "batch": {
-            "pricing_type": "unknown",
-            "category": "other",
-            "cached_input": 4.0
-          }
-        },
-        "default_tier": "batch",
-        "available_tiers": [
-          "batch"
-        ],
-        "pricing_type": "unknown",
-        "category": "other",
-        "cached_input": 4.0
-      },
-      "computer-use": {
-        "model": "Computer use",
-        "timestamp": "2026-04-28T12:29:09.551881+00:00",
-        "tiers": {
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 1.5,
-            "output": 6.0
-          }
-        },
-        "default_tier": "batch",
-        "available_tiers": [
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 1.5,
-        "output": 6.0
-      },
-      "o4-mini-2025-04-16": {
-        "model": "o4-mini-2025-04-16",
-        "timestamp": "2026-04-28T12:29:09.554197+00:00",
-        "tiers": {
-          "standard": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 4.0,
-            "cached_input": 1.0,
-            "output": 16.0
-          },
-          "batch": {
-            "pricing_type": "per_1m_tokens",
-            "category": "other",
-            "input": 2.0,
-            "cached_input": 0.5,
-            "output": 8.0
-          }
-        },
-        "default_tier": "standard",
-        "available_tiers": [
-          "standard",
-          "batch"
-        ],
-        "pricing_type": "per_1m_tokens",
-        "category": "other",
-        "input": 4.0,
-        "output": 16.0,
-        "cached_input": 1.0
-      },
-      "o4-mini-2025-04-16with-data-sharing": {
-        "model": "o4-mini-2025-04-16with data sharing",
-        "timestamp": "2026-04-28T12:29:09.554286+00:00",
         "tiers": {
           "standard": {
             "pricing_type": "per_1m_tokens",
