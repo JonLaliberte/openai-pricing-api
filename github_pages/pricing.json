@@ -1,7 +1,7 @@
 {
   "gpt-6-astra": {
     "model": "gpt-6-astra",
-    "timestamp": "2026-09-11T15:22:06.730022+00:00",
+    "timestamp": "2026-09-12T14:30:14.097662+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -39,7 +39,7 @@
   },
   "gpt-5.6-sol": {
     "model": "gpt-5.6-sol",
-    "timestamp": "2026-09-11T15:22:06.730303+00:00",
+    "timestamp": "2026-09-12T14:30:14.097911+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -77,7 +77,7 @@
   },
   "gpt-5.6-terra": {
     "model": "gpt-5.6-terra",
-    "timestamp": "2026-09-11T15:22:06.730404+00:00",
+    "timestamp": "2026-09-12T14:30:14.097997+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -115,7 +115,7 @@
   },
   "gpt-5.6-luna": {
     "model": "gpt-5.6-luna",
-    "timestamp": "2026-09-11T15:22:06.730497+00:00",
+    "timestamp": "2026-09-12T14:30:14.098087+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -153,7 +153,7 @@
   },
   "gpt-5.6-cyber": {
     "model": "gpt-5.6-cyber",
-    "timestamp": "2026-09-11T15:22:06.734879+00:00",
+    "timestamp": "2026-09-12T14:30:14.101909+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -171,7 +171,7 @@
   },
   "gpt-live-1": {
     "model": "gpt-live-1",
-    "timestamp": "2026-09-11T15:22:06.735808+00:00",
+    "timestamp": "2026-09-12T14:30:14.102766+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_minute",
@@ -189,7 +189,7 @@
   },
   "gpt-realtime-2.1": {
     "model": "gpt-realtime-2.1",
-    "timestamp": "2026-09-11T15:22:06.736649+00:00",
+    "timestamp": "2026-09-12T14:30:14.103516+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -211,7 +211,7 @@
   },
   "text": {
     "model": "Text",
-    "timestamp": "2026-09-11T15:22:06.736725+00:00",
+    "timestamp": "2026-09-12T14:30:14.103566+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -235,7 +235,7 @@
   },
   "image": {
     "model": "Image",
-    "timestamp": "2026-09-11T15:22:06.736791+00:00",
+    "timestamp": "2026-09-12T14:30:14.103607+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -253,7 +253,7 @@
   },
   "gpt-realtime-2.1-mini": {
     "model": "gpt-realtime-2.1-mini",
-    "timestamp": "2026-09-11T15:22:06.736850+00:00",
+    "timestamp": "2026-09-12T14:30:14.103649+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -275,7 +275,7 @@
   },
   "gpt-image-2.5-sunburst": {
     "model": "gpt-image-2.5-sunburst",
-    "timestamp": "2026-09-11T15:22:06.737634+00:00",
+    "timestamp": "2026-09-12T14:30:14.104348+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -297,7 +297,7 @@
   },
   "gpt-image-2.5-flare": {
     "model": "gpt-image-2.5-flare",
-    "timestamp": "2026-09-11T15:22:06.737766+00:00",
+    "timestamp": "2026-09-12T14:30:14.104437+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -319,7 +319,7 @@
   },
   "gpt-image-2": {
     "model": "gpt-image-2",
-    "timestamp": "2026-09-11T15:22:06.738508+00:00",
+    "timestamp": "2026-09-12T14:30:14.105115+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -341,7 +341,7 @@
   },
   "sora-2": {
     "model": "sora-2",
-    "timestamp": "2026-09-11T15:22:06.739329+00:00",
+    "timestamp": "2026-09-12T14:30:14.105840+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_second",
@@ -365,7 +365,7 @@
   },
   "sora-2-pro": {
     "model": "sora-2-pro",
-    "timestamp": "2026-09-11T15:22:06.739394+00:00",
+    "timestamp": "2026-09-12T14:30:14.105912+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_second",
@@ -389,7 +389,7 @@
   },
   "gpt-4o-transcribe": {
     "model": "gpt-4o-transcribe",
-    "timestamp": "2026-09-11T15:22:06.741640+00:00",
+    "timestamp": "2026-09-12T14:30:14.108924+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -409,7 +409,7 @@
   },
   "gpt-4o-mini-transcribe": {
     "model": "gpt-4o-mini-transcribe",
-    "timestamp": "2026-09-11T15:22:06.741713+00:00",
+    "timestamp": "2026-09-12T14:30:14.108999+00:00",
     "tiers": {
       "batch": {
         "pricing_type": "per_1m_tokens",
@@ -429,7 +429,7 @@
   },
   "chatgpt": {
     "model": "ChatGPT",
-    "timestamp": "2026-09-11T15:22:06.744066+00:00",
+    "timestamp": "2026-09-12T14:30:14.111512+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -451,7 +451,7 @@
   },
   "codex": {
     "model": "Codex",
-    "timestamp": "2026-09-11T15:22:06.744185+00:00",
+    "timestamp": "2026-09-12T14:30:14.111607+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -471,9 +471,31 @@
     "output": 28.0,
     "cached_input": 0.35
   },
+  "life-sciences": {
+    "model": "Life Sciences",
+    "timestamp": "2026-09-12T14:30:14.111682+00:00",
+    "tiers": {
+      "standard": {
+        "pricing_type": "per_1m_tokens",
+        "category": "other",
+        "input": 5.0,
+        "cached_input": 0.5,
+        "output": 25.0
+      }
+    },
+    "default_tier": "standard",
+    "available_tiers": [
+      "standard"
+    ],
+    "pricing_type": "per_1m_tokens",
+    "category": "other",
+    "input": 5.0,
+    "output": 25.0,
+    "cached_input": 0.5
+  },
   "o4-mini-2025-04-16": {
     "model": "o4-mini-2025-04-16",
-    "timestamp": "2026-09-11T15:22:06.747431+00:00",
+    "timestamp": "2026-09-12T14:30:14.114363+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
@@ -503,7 +525,7 @@
   },
   "o4-mini-2025-04-16with-data-sharing": {
     "model": "o4-mini-2025-04-16with data sharing",
-    "timestamp": "2026-09-11T15:22:06.747565+00:00",
+    "timestamp": "2026-09-12T14:30:14.114447+00:00",
     "tiers": {
       "standard": {
         "pricing_type": "per_1m_tokens",
