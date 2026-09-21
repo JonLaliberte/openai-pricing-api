@@ -1,5 +1,6 @@
 """Regression tests for tier-aware pricing support."""
 
+import html
 import importlib.util
 import json
 from pathlib import Path
@@ -217,3 +218,95 @@ def test_calculator_uses_requested_image_tier(tmp_path):
 
     assert calculator.calculate_image_cost("gpt-image-1", count=2) == 0.08
     assert calculator.calculate_image_cost("gpt-image-1", count=2, tier="batch") == 0.04
+
+
+def astro_island(props: dict, tier: str | None = None) -> str:
+    """Render a pricing <astro-island> the way the docs page serializes its props."""
+
+    def encode(value):
+        if isinstance(value, list):
+            return [1, [encode(item) for item in value]]
+        if isinstance(value, dict):
+            return [0, {key: encode(item) for key, item in value.items()}]
+        return [0, value]
+
+    serialized = json.dumps({key: encode(value) for key, value in props.items()})
+    island = (
+        '<astro-island component-url="/_astro/pricing.abc.js" '
+        f"props='{html.escape(serialized, quote=True)}'></astro-island>"
+    )
+    if tier:
+        return f'<div data-content-switcher-pane="true" data-value="{tier}">{island}</div>'
+    return island
+
+
+def test_parse_pricing_html_reads_astro_component_props():
+    """Current page layout: parse structured props, including collapsed rows and fast-mode tier."""
+    scraper = load_scraper_module()
+    page = "<html><body>" + "".join([
+        astro_island({"tier": "standard", "rows": [
+            ["gpt-6-astra", 10, 1, 12.5, 50],
+            ["gpt-5.5 (<272K context length)", 5, 0.5, "-", 30],
+            ["gpt-5-pro", 15, None, 120],
+        ]}, "standard"),
+        astro_island({"tier": "fast", "rows": [["gpt-6-astra", 20, 2, 25, 100]]}, "fast"),
+        astro_island({
+            "headings": ["Model", "Modality", "Input", "Cached input", "Output / cost"],
+            "groups": [
+                {"model": "gpt-realtime", "rows": [["Audio", 32, 0.4, 64], ["Text", 4, 0.4, 16]]},
+                {"model": "tts-1", "rows": [["Text", "$15.00 / 1M characters", "-", "-"]]},
+            ],
+        }),
+        astro_island({
+            "headings": ["Model", "Size", "Portrait", "Landscape", "Price per second"],
+            "groups": [{"model": "sora-2-pro", "rows": [
+                ["720p", "720x1280", "1280x720", "$0.30"],
+                ["1080p", "1080x1920", "1920x1080", "$0.70"],
+            ]}],
+        }, "batch"),
+        astro_island({
+            "headings": ["Category", "Model", "Input", "Cached input", "Output"],
+            "groups": [{"model": "Embedding", "rows": [["text-embedding-3-small", 0.02, "-", "-"]]}],
+        }, "standard"),
+        astro_island({
+            "headings": ["Model", "Training", "Input", "Cached input", "Output"],
+            "rows": [
+                [{"__pricingHtml": "o4-mini-2025-04-16<br /><small>with data sharing</small>"},
+                 "$100.00 / hour", 2, 0.5, 8],
+                [{"__pricingHtml": "gpt-5-pro<br /><small>Legacy</small>"}, 8, 3, None, 6],
+            ],
+        }, "standard"),
+    ]) + "</body></html>"
+
+    pricing = scraper.parse_pricing_html(page)
+
+    astra = pricing["gpt-6-astra"]
+    assert astra["available_tiers"] == ["standard", "priority"]
+    assert astra["input"] == 10.0
+    assert astra["cache_write"] == 12.5
+    assert astra["tiers"]["priority"]["output"] == 100.0
+
+    assert pricing["gpt-5.5"]["cached_input"] == 0.5
+    assert "cache_write" not in pricing["gpt-5.5"]
+    assert pricing["gpt-5-pro"]["output"] == 120.0
+    assert "cached_input" not in pricing["gpt-5-pro"]
+
+    assert pricing["gpt-realtime"]["input"] == 32.0
+    assert pricing["gpt-realtime"]["modalities"]["text"]["output"] == 16.0
+    assert pricing["tts-1"]["pricing_type"] == "per_1m_chars"
+    assert pricing["tts-1"]["price"] == 15.0
+
+    assert pricing["sora-2-pro"]["default_tier"] == "batch"
+    assert pricing["sora-2-pro"]["price"] == 0.3
+    assert pricing["sora-2-pro"]["price_by_size"]["1080p"] == 0.7
+
+    assert pricing["text-embedding-3-small"]["input"] == 0.02
+    assert "category" not in pricing and "embedding" not in pricing
+
+    finetune = pricing["o4-mini-2025-04-16-with-data-sharing"]
+    assert finetune["category"] == "fine_tuning"
+    assert finetune["training"] == 100.0
+    assert finetune["training_unit"] == "per_hour"
+    # A fine-tuning row must not overwrite the base model's prices
+    assert pricing["gpt-5-pro"]["category"] == "language_model"
+    assert pricing["gpt-5-pro"]["input"] == 15.0
