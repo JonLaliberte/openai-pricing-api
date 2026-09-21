@@ -170,6 +170,7 @@ class OpenAIPricingViewer {
             'embeddings': 'Embeddings',
             'computer_use': 'Computer Use',
             'storage': 'Storage',
+            'fine_tuning': 'Fine-tuning',
             'other': 'Other',
             'unknown': 'Unknown'
         };
@@ -182,7 +183,8 @@ class OpenAIPricingViewer {
             'per_image': ' / image',
             'per_minute': ' / minute',
             'per_second': ' / second',
-            'per_1k_chars': ' / 1K chars'
+            'per_1k_chars': ' / 1K chars',
+            'per_1m_chars': ' / 1M chars'
         };
         return units[type] || '';
     }

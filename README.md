@@ -229,7 +229,6 @@ for model_name, model_data in data['models'].items():
 
 ```bash
 pip install -r requirements.txt
-playwright install chromium
 ```
 
 ### Run the Script
@@ -275,12 +274,10 @@ Examples:
 Edit `scripts/fetch_openai_pricing.py`:
 
 ```python
-PRICING_URL = "https://platform.openai.com/docs/pricing"  # API docs (recommended)
-# OR
-PRICING_URL = "https://openai.com/api/pricing/"  # Marketing page (limited data)
+PRICING_URL = "https://developers.openai.com/api/docs/pricing"
 ```
 
-**Note:** The API docs URL (`platform.openai.com`) contains more comprehensive pricing data (60+ models) compared to the marketing page.
+**Note:** The API docs pricing page embeds each pricing table's full data (including rows collapsed behind "All models") in its Astro component props, which the script parses directly. It falls back to scraping rendered `<table>` elements if those props aren't found.
 
 ## Data Structure
 
@@ -929,7 +926,7 @@ python examples/basic_usage.py
 
 - Data is scraped from the official OpenAI pricing page
 - Always verify current prices on [openai.com/api/pricing](https://openai.com/api/pricing/)
-- Script uses Playwright for dynamic content loading
+- Script reads the structured data embedded in the server-rendered page (no browser needed)
 - GitHub Actions is free for public repositories
 
 ## License

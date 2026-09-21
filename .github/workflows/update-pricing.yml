@@ -26,11 +26,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Install Playwright browsers
-        run: |
-          playwright install chromium
-          playwright install-deps chromium
-
       - name: Create github_pages directory
         run: mkdir -p github_pages
 
