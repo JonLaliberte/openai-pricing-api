@@ -8,6 +8,7 @@ import html as html_lib
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
@@ -17,8 +18,8 @@ PRICING_URL = "https://developers.openai.com/api/docs/pricing"
 OUTPUT_FILE = "github_pages/pricing.json"
 API_FILE = "github_pages/api.json"
 HISTORY_FILE = "github_pages/history.json"
-SUPPORTED_TIERS = ("standard", "batch", "flex", "priority")
-PREFERRED_TIER_ORDER = ("standard", "batch", "flex", "priority")
+SUPPORTED_TIERS = ("standard", "batch", "flex", "priority", "ultrafast")
+PREFERRED_TIER_ORDER = ("standard", "batch", "flex", "priority", "ultrafast")
 # The pricing page renamed "Priority" processing to "Fast mode"; the API accepts both.
 TIER_ALIASES = {"fast": "priority", "fast mode": "priority"}
 
@@ -27,9 +28,10 @@ def fetch_html(url: str) -> str:
     """
     Fetch the pricing page HTML.
 
-    The page is server-rendered (Astro), and every pricing table's full data,
-    including rows collapsed behind "All models", is embedded in the
-    <astro-island> props, so no JavaScript rendering is needed.
+    The page is server-rendered (Astro), and every pricing table's short-context
+    data, including rows collapsed behind "All models", is embedded in the
+    <astro-island> props, so no JavaScript rendering is needed. Long-context
+    prices live in the pricing component's JS bundle (see fetch_long_context_prices).
     """
     print(f"Fetching {url}...")
 
@@ -276,17 +278,18 @@ def parse_image_resolution_table(table, headers: list, pricing: Dict[str, Any], 
         print(f"      {quality}: {resolution_prices}")
 
 
-def parse_pricing_html(html: str) -> Dict[str, Any]:
+def parse_pricing_html(html: str, long_context: Optional[Dict[str, Dict[str, Any]]] = None) -> Dict[str, Any]:
     """Parse OpenAI pricing HTML and extract model prices.
 
     Prefers the structured data embedded in the page's Astro component props,
-    falling back to scraping rendered <table> elements.
+    falling back to scraping rendered <table> elements. `long_context` is the
+    tier -> model -> prices map from extract_long_context_prices.
     """
     from bs4 import BeautifulSoup
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    pricing = parse_pricing_islands(soup)
+    pricing = parse_pricing_islands(soup, long_context or {})
     if pricing:
         return pricing
 
@@ -483,17 +486,105 @@ def parse_use_case_group(model_name: str, headers: List[str], rows: List[List[An
     return data or estimate
 
 
-def parse_pricing_component(props: Dict[str, Any], tier: str, pricing: Dict[str, Any]) -> None:
+LONG_CONTEXT_FIELDS = {
+    "input": "input",
+    "cachedInput": "cached_input",
+    "cacheWrite": "cache_write",
+    "output": "output",
+}
+
+
+def js_object_to_json(source: str) -> Any:
+    """Parse a minified JS object literal of plain keys, numbers and template strings."""
+    text = re.sub(r'`([^`]*)`', lambda m: json.dumps(m.group(1)), source)
+    text = re.sub(r'([{,])([A-Za-z_$][\w$]*):', r'\1"\2":', text)
+    text = re.sub(r'([:\[,])(-?)\.(\d)', r'\1\g<2>0.\3', text)
+    return json.loads(text)
+
+
+def extract_long_context_prices(js: str) -> Dict[str, Dict[str, Dict[str, float]]]:
+    """Extract the tier -> model -> long-context prices map from the pricing bundle.
+
+    The page computes long-context columns client-side from a literal like
+    {standard:{"gpt-6-astra":{input:20,output:75,cachedInput:2,cacheWrite:25}},...};
+    "-" marks a price that isn't offered.
+    """
+    tier_keys = "|".join(sorted({*SUPPORTED_TIERS, *TIER_ALIASES}))
+    for match in re.finditer(r'\{(?:' + tier_keys + r'):\{"', js):
+        depth = 0
+        for end in range(match.start(), len(js)):
+            if js[end] == '{':
+                depth += 1
+            elif js[end] == '}':
+                depth -= 1
+                if depth == 0:
+                    break
+        try:
+            raw = js_object_to_json(js[match.start():end + 1])
+        except json.JSONDecodeError:
+            continue
+
+        prices: Dict[str, Dict[str, Dict[str, float]]] = {}
+        for tier_label, models in raw.items():
+            tier = normalize_tier(tier_label)
+            if not tier or not isinstance(models, dict):
+                continue
+            for model_name, values in models.items():
+                if not isinstance(values, dict):
+                    continue
+                fields = {
+                    field: float(values[key]) for key, field in LONG_CONTEXT_FIELDS.items()
+                    if isinstance(values.get(key), (int, float)) and not isinstance(values.get(key), bool)
+                }
+                if fields:
+                    prices.setdefault(tier, {})[model_name] = fields
+        if prices:
+            return prices
+    return {}
+
+
+def fetch_long_context_prices(html: str) -> Dict[str, Dict[str, Dict[str, float]]]:
+    """Fetch the text-token pricing component's bundle and extract long-context prices."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, 'html.parser')
+    urls = {
+        island['component-url'] for island in soup.find_all('astro-island')
+        if 'TextToken' in (island.get('component-export') or '') and island.get('component-url')
+    }
+    for url in sorted(urls):
+        try:
+            prices = extract_long_context_prices(fetch_html(urllib.parse.urljoin(PRICING_URL, url)))
+        except Exception as e:  # The rest of the feed is still worth publishing
+            print(f"WARNING: could not read long-context prices from {url}: {e}")
+            continue
+        if prices:
+            print(f"Found long-context prices for {sum(len(m) for m in prices.values())} model/tier pairs")
+            return prices
+
+    print("WARNING: no long-context prices found; long_context fields will be missing")
+    return {}
+
+
+def parse_pricing_component(
+    props: Dict[str, Any],
+    tier: str,
+    pricing: Dict[str, Any],
+    long_context: Optional[Dict[str, Dict[str, Any]]] = None,
+) -> None:
     """Parse one pricing component's props into the pricing dict."""
     # Flagship text-token tables: rows are [model, input, cached input, (cache writes,) output]
     if "tier" in props and "rows" in props and "headings" not in props:
-        tier = normalize_tier(props["tier"]) or tier
+        tier_long_context = (long_context or {}).get(tier, {})
         for row in props["rows"]:
             model_name = clean_model_name(cell_text(row[0]))
             columns = ["input", "cached input", "cache writes", "output"]
             if len(row) == 4:
                 columns = ["input", "cached input", "output"]
-            data = token_model_data(model_name, token_fields(columns, row[1:]))
+            fields = token_fields(columns, row[1:])
+            if model_name in tier_long_context and "long_context" not in fields:
+                fields["long_context"] = dict(tier_long_context[model_name])
+            data = token_model_data(model_name, fields)
             if data:
                 upsert_tiered_model(pricing, model_name, data, tier)
         return
@@ -556,7 +647,7 @@ def parse_pricing_component(props: Dict[str, Any], tier: str, pricing: Dict[str,
         upsert_tiered_model(pricing, model_name, data, tier)
 
 
-def parse_pricing_islands(soup) -> Dict[str, Any]:
+def parse_pricing_islands(soup, long_context: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
     """Extract pricing from the structured props of the page's Astro pricing components."""
     pricing: Dict[str, Any] = {}
     islands = [
@@ -572,13 +663,20 @@ def parse_pricing_islands(soup) -> Dict[str, Any]:
             continue
         props = {key: decode_astro_value(value) for key, value in raw_props.items()}
 
+        # Only an unlabeled component defaults to standard. An unrecognized tier
+        # label (e.g. a newly added tier) must be skipped, not stored as standard.
         pane = island.find_parent(attrs={'data-content-switcher-pane': True})
-        tier = normalize_tier(pane.get('data-value')) if pane else None
-        tier = tier or "standard"
+        tier_label = props.get("tier") if "tier" in props else (pane.get('data-value') if pane else None)
+        tier = normalize_tier(tier_label) if tier_label else "standard"
 
         heading = island.find_previous(['h2', 'h3'])
-        print(f"  {island.get('component-export')} ({heading.get_text(strip=True) if heading else '?'}, {tier})")
-        parse_pricing_component(props, tier, pricing)
+        heading_text = heading.get_text(strip=True) if heading else '?'
+        if not tier:
+            print(f"  WARNING: skipping {island.get('component-export')} ({heading_text}): "
+                  f"unrecognized tier {tier_label!r}")
+            continue
+        print(f"  {island.get('component-export')} ({heading_text}, {tier})")
+        parse_pricing_component(props, tier, pricing, long_context)
 
     return pricing
 
@@ -778,7 +876,7 @@ def main():
         html = fetch_html(PRICING_URL)
         
         # Parse pricing
-        pricing = parse_pricing_html(html)
+        pricing = parse_pricing_html(html, long_context=fetch_long_context_prices(html))
         
         if not pricing:
             print("\nWARNING: No pricing data extracted!")

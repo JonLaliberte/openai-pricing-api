@@ -310,3 +310,72 @@ def test_parse_pricing_html_reads_astro_component_props():
     # A fine-tuning row must not overwrite the base model's prices
     assert pricing["gpt-5-pro"]["category"] == "language_model"
     assert pricing["gpt-5-pro"]["input"] == 15.0
+
+
+# Shape of the long-context price map in the pricing component's JS bundle.
+PRICING_BUNDLE_JS = (
+    'var a=1;var l={ultrafast:{"gpt-6-astra":{input:120,cachedInput:12,cacheWrite:150,output:450}},'
+    'standard:{"gpt-6-astra":{input:20,output:75,cachedInput:2,cacheWrite:25},'
+    '"gpt-6-luna":{input:.2,output:.75,cachedInput:.02,cacheWrite:.25},'
+    '"gpt-5.5":{input:10,output:45,cachedInput:1,cacheWrite:`-`},'
+    '"gpt-5.4-mini":{input:`-`,output:`-`,cachedInput:`-`,cacheWrite:`-`}},'
+    'fast:{"gpt-6-astra":{input:40,output:150,cachedInput:4,cacheWrite:50}}};export{l};'
+)
+
+
+def test_ultrafast_tier_does_not_overwrite_standard():
+    """A tier rendered after standard must never be stored under standard."""
+    scraper = load_scraper_module()
+    page = "<html><body>" + "".join([
+        astro_island({"tier": "standard", "rows": [["gpt-6-astra", 10, 1, 12.5, 50]]}, "standard"),
+        astro_island({"tier": "fast", "rows": [["gpt-6-astra", 20, 2, 25, 100]]}, "fast"),
+        astro_island({"tier": "ultrafast", "rows": [["gpt-6-astra", 60, 6, 75, 300]]}, "ultrafast"),
+        astro_island({"tier": "hyperspeed", "rows": [["gpt-6-astra", 999, 99, 999, 999]]}, "hyperspeed"),
+    ]) + "</body></html>"
+
+    astra = scraper.parse_pricing_html(page)["gpt-6-astra"]
+
+    # The unrecognized "hyperspeed" tier is skipped rather than stored as standard
+    assert astra["available_tiers"] == ["standard", "priority", "ultrafast"]
+    assert astra["input"] == 10.0
+    assert astra["output"] == 50.0
+    assert astra["tiers"]["standard"]["output"] == 50.0
+    assert astra["tiers"]["priority"]["output"] == 100.0
+    assert astra["tiers"]["ultrafast"]["output"] == 300.0
+
+
+def test_extract_long_context_prices_from_bundle():
+    scraper = load_scraper_module()
+
+    prices = scraper.extract_long_context_prices(PRICING_BUNDLE_JS)
+
+    assert prices["standard"]["gpt-6-astra"] == {
+        "input": 20.0, "cached_input": 2.0, "cache_write": 25.0, "output": 75.0,
+    }
+    assert prices["standard"]["gpt-6-luna"]["input"] == 0.2
+    assert prices["standard"]["gpt-5.5"] == {"input": 10.0, "cached_input": 1.0, "output": 45.0}
+    assert "gpt-5.4-mini" not in prices["standard"]
+    assert prices["priority"]["gpt-6-astra"]["output"] == 150.0
+    assert prices["ultrafast"]["gpt-6-astra"]["input"] == 120.0
+    assert scraper.extract_long_context_prices("var x={foo:1};") == {}
+
+
+def test_parse_pricing_html_merges_long_context_prices():
+    scraper = load_scraper_module()
+    page = "<html><body>" + "".join([
+        astro_island({"tier": "standard", "rows": [
+            ["gpt-6-astra", 10, 1, 12.5, 50],
+            ["gpt-5.5 (<272K context length)", 5, 0.5, "-", 30],
+            ["gpt-5.4-mini", 0.75, 0.075, 4.5],
+        ]}, "standard"),
+        astro_island({"tier": "fast", "rows": [["gpt-6-astra", 20, 2, 25, 100]]}, "fast"),
+    ]) + "</body></html>"
+    long_context = scraper.extract_long_context_prices(PRICING_BUNDLE_JS)
+
+    pricing = scraper.parse_pricing_html(page, long_context=long_context)
+
+    astra = pricing["gpt-6-astra"]
+    assert astra["long_context"] == {"input": 20.0, "cached_input": 2.0, "cache_write": 25.0, "output": 75.0}
+    assert astra["tiers"]["priority"]["long_context"]["output"] == 150.0
+    assert pricing["gpt-5.5"]["long_context"]["input"] == 10.0
+    assert "long_context" not in pricing["gpt-5.4-mini"]
