@@ -1,7 +1,7 @@
 {
   "gpt-6-astra": {
     "model": "gpt-6-astra",
-    "timestamp": "2026-10-25T15:08:06.334764+00:00",
+    "timestamp": "2026-10-26T17:44:44.624205+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -82,7 +82,7 @@
   },
   "gpt-6.1-sol": {
     "model": "gpt-6.1-sol",
-    "timestamp": "2026-10-25T15:08:06.334824+00:00",
+    "timestamp": "2026-10-26T17:44:44.624251+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -163,7 +163,7 @@
   },
   "gpt-6-luna": {
     "model": "gpt-6-luna",
-    "timestamp": "2026-10-25T15:08:06.334853+00:00",
+    "timestamp": "2026-10-26T17:44:44.624268+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -229,7 +229,7 @@
   },
   "gpt-6-sol": {
     "model": "gpt-6-sol",
-    "timestamp": "2026-10-25T15:08:06.334875+00:00",
+    "timestamp": "2026-10-26T17:44:44.624281+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -295,7 +295,7 @@
   },
   "gpt-5.6-sol": {
     "model": "gpt-5.6-sol",
-    "timestamp": "2026-10-25T15:08:06.334896+00:00",
+    "timestamp": "2026-10-26T17:44:44.624294+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -361,7 +361,7 @@
   },
   "gpt-5.6-terra": {
     "model": "gpt-5.6-terra",
-    "timestamp": "2026-10-25T15:08:06.334916+00:00",
+    "timestamp": "2026-10-26T17:44:44.624305+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -427,7 +427,7 @@
   },
   "gpt-5.6-luna": {
     "model": "gpt-5.6-luna",
-    "timestamp": "2026-10-25T15:08:06.334936+00:00",
+    "timestamp": "2026-10-26T17:44:44.624316+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -493,7 +493,7 @@
   },
   "gpt-5.5": {
     "model": "gpt-5.5",
-    "timestamp": "2026-10-25T15:08:06.335006+00:00",
+    "timestamp": "2026-10-26T17:44:44.624361+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -546,7 +546,7 @@
   },
   "gpt-5.5-pro": {
     "model": "gpt-5.5-pro",
-    "timestamp": "2026-10-25T15:08:06.335039+00:00",
+    "timestamp": "2026-10-26T17:44:44.624381+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -581,7 +581,7 @@
   },
   "gpt-5.4": {
     "model": "gpt-5.4",
-    "timestamp": "2026-10-25T15:08:06.335063+00:00",
+    "timestamp": "2026-10-26T17:44:44.624395+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -634,7 +634,7 @@
   },
   "gpt-5.4-mini": {
     "model": "gpt-5.4-mini",
-    "timestamp": "2026-10-25T15:08:06.335082+00:00",
+    "timestamp": "2026-10-26T17:44:44.624405+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -672,7 +672,7 @@
   },
   "gpt-5.4-nano": {
     "model": "gpt-5.4-nano",
-    "timestamp": "2026-10-25T15:08:06.335099+00:00",
+    "timestamp": "2026-10-26T17:44:44.624414+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -702,7 +702,7 @@
   },
   "gpt-5.4-pro": {
     "model": "gpt-5.4-pro",
-    "timestamp": "2026-10-25T15:08:06.335125+00:00",
+    "timestamp": "2026-10-26T17:44:44.624427+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -741,7 +741,7 @@
   },
   "gpt-5.2": {
     "model": "gpt-5.2",
-    "timestamp": "2026-10-25T15:08:06.335144+00:00",
+    "timestamp": "2026-10-26T17:44:44.624436+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -779,7 +779,7 @@
   },
   "gpt-5.2-pro": {
     "model": "gpt-5.2-pro",
-    "timestamp": "2026-10-25T15:08:06.335166+00:00",
+    "timestamp": "2026-10-26T17:44:44.624447+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -806,7 +806,7 @@
   },
   "gpt-5.1": {
     "model": "gpt-5.1",
-    "timestamp": "2026-10-25T15:08:06.335182+00:00",
+    "timestamp": "2026-10-26T17:44:44.624455+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -844,7 +844,7 @@
   },
   "gpt-5": {
     "model": "gpt-5",
-    "timestamp": "2026-10-25T15:08:06.335198+00:00",
+    "timestamp": "2026-10-26T17:44:44.624463+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -882,7 +882,7 @@
   },
   "gpt-5-mini": {
     "model": "gpt-5-mini",
-    "timestamp": "2026-10-25T15:08:06.335213+00:00",
+    "timestamp": "2026-10-26T17:44:44.624472+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -920,7 +920,7 @@
   },
   "gpt-5-nano": {
     "model": "gpt-5-nano",
-    "timestamp": "2026-10-25T15:08:06.335231+00:00",
+    "timestamp": "2026-10-26T17:44:44.624481+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -950,7 +950,7 @@
   },
   "gpt-5-pro": {
     "model": "gpt-5-pro",
-    "timestamp": "2026-10-25T15:08:06.335276+00:00",
+    "timestamp": "2026-10-26T17:44:44.624492+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -977,7 +977,7 @@
   },
   "gpt-4.1": {
     "model": "gpt-4.1",
-    "timestamp": "2026-10-25T15:08:06.335294+00:00",
+    "timestamp": "2026-10-26T17:44:44.624499+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1014,7 +1014,7 @@
   },
   "gpt-4.1-mini": {
     "model": "gpt-4.1-mini",
-    "timestamp": "2026-10-25T15:08:06.335309+00:00",
+    "timestamp": "2026-10-26T17:44:44.624508+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1051,7 +1051,7 @@
   },
   "gpt-4.1-nano": {
     "model": "gpt-4.1-nano",
-    "timestamp": "2026-10-25T15:08:06.335325+00:00",
+    "timestamp": "2026-10-26T17:44:44.624517+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1088,7 +1088,7 @@
   },
   "gpt-4o": {
     "model": "gpt-4o",
-    "timestamp": "2026-10-25T15:08:06.335343+00:00",
+    "timestamp": "2026-10-26T17:44:44.624526+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1125,7 +1125,7 @@
   },
   "gpt-4o-2024-05-13": {
     "model": "gpt-4o-2024-05-13",
-    "timestamp": "2026-10-25T15:08:06.335362+00:00",
+    "timestamp": "2026-10-26T17:44:44.624536+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1159,7 +1159,7 @@
   },
   "gpt-4o-mini": {
     "model": "gpt-4o-mini",
-    "timestamp": "2026-10-25T15:08:06.335378+00:00",
+    "timestamp": "2026-10-26T17:44:44.624544+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1196,7 +1196,7 @@
   },
   "o1": {
     "model": "o1",
-    "timestamp": "2026-10-25T15:08:06.335394+00:00",
+    "timestamp": "2026-10-26T17:44:44.624552+00:00",
     "tiers": {
       "standard": {
         "category": "reasoning",
@@ -1225,7 +1225,7 @@
   },
   "o1-pro": {
     "model": "o1-pro",
-    "timestamp": "2026-10-25T15:08:06.335412+00:00",
+    "timestamp": "2026-10-26T17:44:44.624560+00:00",
     "tiers": {
       "standard": {
         "category": "reasoning",
@@ -1252,7 +1252,7 @@
   },
   "o3-pro": {
     "model": "o3-pro",
-    "timestamp": "2026-10-25T15:08:06.335431+00:00",
+    "timestamp": "2026-10-26T17:44:44.624570+00:00",
     "tiers": {
       "standard": {
         "category": "reasoning",
@@ -1279,7 +1279,7 @@
   },
   "o3": {
     "model": "o3",
-    "timestamp": "2026-10-25T15:08:06.335486+00:00",
+    "timestamp": "2026-10-26T17:44:44.624616+00:00",
     "tiers": {
       "standard": {
         "category": "reasoning",
@@ -1316,7 +1316,7 @@
   },
   "o4-mini": {
     "model": "o4-mini",
-    "timestamp": "2026-10-25T15:08:06.335502+00:00",
+    "timestamp": "2026-10-26T17:44:44.624626+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1353,7 +1353,7 @@
   },
   "o3-mini": {
     "model": "o3-mini",
-    "timestamp": "2026-10-25T15:08:06.335520+00:00",
+    "timestamp": "2026-10-26T17:44:44.624635+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1382,7 +1382,7 @@
   },
   "gpt-4-turbo-2024-04-09": {
     "model": "gpt-4-turbo-2024-04-09",
-    "timestamp": "2026-10-25T15:08:06.335538+00:00",
+    "timestamp": "2026-10-26T17:44:44.624645+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1409,7 +1409,7 @@
   },
   "gpt-4-0613": {
     "model": "gpt-4-0613",
-    "timestamp": "2026-10-25T15:08:06.335556+00:00",
+    "timestamp": "2026-10-26T17:44:44.624655+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1436,7 +1436,7 @@
   },
   "gpt-3.5-turbo": {
     "model": "gpt-3.5-turbo",
-    "timestamp": "2026-10-25T15:08:06.335573+00:00",
+    "timestamp": "2026-10-26T17:44:44.624664+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1456,7 +1456,7 @@
   },
   "gpt-3.5-turbo-0125": {
     "model": "gpt-3.5-turbo-0125",
-    "timestamp": "2026-10-25T15:08:06.335590+00:00",
+    "timestamp": "2026-10-26T17:44:44.624674+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1483,7 +1483,7 @@
   },
   "gpt-5.6-cyber": {
     "model": "gpt-5.6-cyber",
-    "timestamp": "2026-10-25T15:08:06.337788+00:00",
+    "timestamp": "2026-10-26T17:44:44.625963+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1507,7 +1507,7 @@
   },
   "gpt-5.5-cyber": {
     "model": "gpt-5.5-cyber",
-    "timestamp": "2026-10-25T15:08:06.337810+00:00",
+    "timestamp": "2026-10-26T17:44:44.625975+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -1529,7 +1529,7 @@
   },
   "gpt-rosalind-research": {
     "model": "gpt-rosalind-research",
-    "timestamp": "2026-10-25T15:08:06.337950+00:00",
+    "timestamp": "2026-10-26T17:44:44.626078+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1551,7 +1551,7 @@
   },
   "gpt-rosalind-discovery": {
     "model": "gpt-rosalind-discovery",
-    "timestamp": "2026-10-25T15:08:06.337965+00:00",
+    "timestamp": "2026-10-26T17:44:44.626088+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1573,7 +1573,7 @@
   },
   "gpt-live-1": {
     "model": "gpt-live-1",
-    "timestamp": "2026-10-25T15:08:06.338092+00:00",
+    "timestamp": "2026-10-26T17:44:44.626166+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1591,7 +1591,7 @@
   },
   "gpt-realtime-2.1": {
     "model": "gpt-realtime-2.1",
-    "timestamp": "2026-10-25T15:08:06.338329+00:00",
+    "timestamp": "2026-10-26T17:44:44.626300+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1645,7 +1645,7 @@
   },
   "gpt-realtime-2.1-mini": {
     "model": "gpt-realtime-2.1-mini",
-    "timestamp": "2026-10-25T15:08:06.338361+00:00",
+    "timestamp": "2026-10-26T17:44:44.626317+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1699,7 +1699,7 @@
   },
   "gpt-realtime-2": {
     "model": "gpt-realtime-2",
-    "timestamp": "2026-10-25T15:08:06.338385+00:00",
+    "timestamp": "2026-10-26T17:44:44.626330+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1753,7 +1753,7 @@
   },
   "gpt-realtime-1.5": {
     "model": "gpt-realtime-1.5",
-    "timestamp": "2026-10-25T15:08:06.338412+00:00",
+    "timestamp": "2026-10-26T17:44:44.626343+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1807,7 +1807,7 @@
   },
   "gpt-realtime-mini": {
     "model": "gpt-realtime-mini",
-    "timestamp": "2026-10-25T15:08:06.338442+00:00",
+    "timestamp": "2026-10-26T17:44:44.626355+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1861,7 +1861,7 @@
   },
   "gpt-realtime": {
     "model": "gpt-realtime",
-    "timestamp": "2026-10-25T15:08:06.338464+00:00",
+    "timestamp": "2026-10-26T17:44:44.626367+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1915,7 +1915,7 @@
   },
   "gpt-audio-1.5": {
     "model": "gpt-audio-1.5",
-    "timestamp": "2026-10-25T15:08:06.338485+00:00",
+    "timestamp": "2026-10-26T17:44:44.626378+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1955,7 +1955,7 @@
   },
   "gpt-audio-mini": {
     "model": "gpt-audio-mini",
-    "timestamp": "2026-10-25T15:08:06.338505+00:00",
+    "timestamp": "2026-10-26T17:44:44.626389+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -1995,7 +1995,7 @@
   },
   "gpt-audio": {
     "model": "gpt-audio",
-    "timestamp": "2026-10-25T15:08:06.338524+00:00",
+    "timestamp": "2026-10-26T17:44:44.626399+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -2035,7 +2035,7 @@
   },
   "gpt-4o-mini-tts": {
     "model": "gpt-4o-mini-tts",
-    "timestamp": "2026-10-25T15:08:06.338545+00:00",
+    "timestamp": "2026-10-26T17:44:44.626411+00:00",
     "tiers": {
       "standard": {
         "category": "text_to_speech",
@@ -2071,7 +2071,7 @@
   },
   "tts-1": {
     "model": "tts-1",
-    "timestamp": "2026-10-25T15:08:06.338677+00:00",
+    "timestamp": "2026-10-26T17:44:44.626497+00:00",
     "tiers": {
       "standard": {
         "category": "text_to_speech",
@@ -2089,7 +2089,7 @@
   },
   "tts-1-hd": {
     "model": "tts-1-hd",
-    "timestamp": "2026-10-25T15:08:06.338705+00:00",
+    "timestamp": "2026-10-26T17:44:44.626513+00:00",
     "tiers": {
       "standard": {
         "category": "text_to_speech",
@@ -2107,7 +2107,7 @@
   },
   "gpt-image-2.5-sunburst": {
     "model": "gpt-image-2.5-sunburst",
-    "timestamp": "2026-10-25T15:08:06.338947+00:00",
+    "timestamp": "2026-10-26T17:44:44.626664+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2170,7 +2170,7 @@
   },
   "gpt-image-2.5-flare": {
     "model": "gpt-image-2.5-flare",
-    "timestamp": "2026-10-25T15:08:06.338968+00:00",
+    "timestamp": "2026-10-26T17:44:44.626674+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2233,7 +2233,7 @@
   },
   "gpt-image-2": {
     "model": "gpt-image-2",
-    "timestamp": "2026-10-25T15:08:06.338986+00:00",
+    "timestamp": "2026-10-26T17:44:44.626682+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2296,7 +2296,7 @@
   },
   "gpt-image-1.5": {
     "model": "gpt-image-1.5",
-    "timestamp": "2026-10-25T15:08:06.339004+00:00",
+    "timestamp": "2026-10-26T17:44:44.626691+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2362,7 +2362,7 @@
   },
   "gpt-image-1-mini": {
     "model": "gpt-image-1-mini",
-    "timestamp": "2026-10-25T15:08:06.339021+00:00",
+    "timestamp": "2026-10-26T17:44:44.626700+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2425,7 +2425,7 @@
   },
   "chatgpt-image-latest": {
     "model": "chatgpt-image-latest",
-    "timestamp": "2026-10-25T15:08:06.339035+00:00",
+    "timestamp": "2026-10-26T17:44:44.626707+00:00",
     "tiers": {
       "standard": {
         "category": "image_generation_token",
@@ -2491,7 +2491,7 @@
   },
   "gpt-realtime-translate": {
     "model": "gpt-realtime-translate",
-    "timestamp": "2026-10-25T15:08:06.339571+00:00",
+    "timestamp": "2026-10-26T17:44:44.627005+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2509,7 +2509,7 @@
   },
   "gpt-live-transcribe": {
     "model": "gpt-live-transcribe",
-    "timestamp": "2026-10-25T15:08:06.339597+00:00",
+    "timestamp": "2026-10-26T17:44:44.627018+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2527,7 +2527,7 @@
   },
   "gpt-realtime-whisper": {
     "model": "gpt-realtime-whisper",
-    "timestamp": "2026-10-25T15:08:06.339618+00:00",
+    "timestamp": "2026-10-26T17:44:44.627041+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2545,7 +2545,7 @@
   },
   "gpt-transcribe": {
     "model": "gpt-transcribe",
-    "timestamp": "2026-10-25T15:08:06.339639+00:00",
+    "timestamp": "2026-10-26T17:44:44.627054+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2563,7 +2563,7 @@
   },
   "gpt-4o-transcribe": {
     "model": "gpt-4o-transcribe",
-    "timestamp": "2026-10-25T15:08:06.339661+00:00",
+    "timestamp": "2026-10-26T17:44:44.627066+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2585,7 +2585,7 @@
   },
   "gpt-4o-mini-transcribe": {
     "model": "gpt-4o-mini-transcribe",
-    "timestamp": "2026-10-25T15:08:06.339686+00:00",
+    "timestamp": "2026-10-26T17:44:44.627081+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2607,7 +2607,7 @@
   },
   "gpt-4o-transcribe-diarize": {
     "model": "gpt-4o-transcribe-diarize",
-    "timestamp": "2026-10-25T15:08:06.339708+00:00",
+    "timestamp": "2026-10-26T17:44:44.627093+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2629,7 +2629,7 @@
   },
   "whisper": {
     "model": "Whisper",
-    "timestamp": "2026-10-25T15:08:06.339730+00:00",
+    "timestamp": "2026-10-26T17:44:44.627105+00:00",
     "tiers": {
       "standard": {
         "category": "audio_transcription",
@@ -2647,7 +2647,7 @@
   },
   "chat-latest": {
     "model": "chat-latest",
-    "timestamp": "2026-10-25T15:08:06.340021+00:00",
+    "timestamp": "2026-10-26T17:44:44.627288+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -2669,7 +2669,7 @@
   },
   "gpt-5.3-codex": {
     "model": "gpt-5.3-codex",
-    "timestamp": "2026-10-25T15:08:06.340036+00:00",
+    "timestamp": "2026-10-26T17:44:44.627296+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -2699,7 +2699,7 @@
   },
   "gpt-5-search-api": {
     "model": "gpt-5-search-api",
-    "timestamp": "2026-10-25T15:08:06.340048+00:00",
+    "timestamp": "2026-10-26T17:44:44.627303+00:00",
     "tiers": {
       "standard": {
         "category": "language_model",
@@ -2721,7 +2721,7 @@
   },
   "text-embedding-3-small": {
     "model": "text-embedding-3-small",
-    "timestamp": "2026-10-25T15:08:06.340063+00:00",
+    "timestamp": "2026-10-26T17:44:44.627312+00:00",
     "tiers": {
       "standard": {
         "category": "embeddings",
@@ -2739,7 +2739,7 @@
   },
   "text-embedding-3-large": {
     "model": "text-embedding-3-large",
-    "timestamp": "2026-10-25T15:08:06.340076+00:00",
+    "timestamp": "2026-10-26T17:44:44.627319+00:00",
     "tiers": {
       "standard": {
         "category": "embeddings",
@@ -2757,7 +2757,7 @@
   },
   "text-embedding-ada-002": {
     "model": "text-embedding-ada-002",
-    "timestamp": "2026-10-25T15:08:06.340088+00:00",
+    "timestamp": "2026-10-26T17:44:44.627326+00:00",
     "tiers": {
       "standard": {
         "category": "embeddings",
@@ -2775,7 +2775,7 @@
   },
   "omni-moderation-latest": {
     "model": "omni-moderation-latest",
-    "timestamp": "2026-10-25T15:08:06.340104+00:00",
+    "timestamp": "2026-10-26T17:44:44.627334+00:00",
     "tiers": {
       "standard": {
         "category": "other",
@@ -2793,7 +2793,7 @@
   },
   "o4-mini-2025-04-16": {
     "model": "o4-mini-2025-04-16",
-    "timestamp": "2026-10-25T15:08:06.340465+00:00",
+    "timestamp": "2026-10-26T17:44:44.627533+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -2829,7 +2829,7 @@
   },
   "o4-mini-2025-04-16-with-data-sharing": {
     "model": "o4-mini-2025-04-16 with data sharing",
-    "timestamp": "2026-10-25T15:08:06.340643+00:00",
+    "timestamp": "2026-10-26T17:44:44.627651+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -2865,7 +2865,7 @@
   },
   "gpt-4.1-2025-04-14": {
     "model": "gpt-4.1-2025-04-14",
-    "timestamp": "2026-10-25T15:08:06.340675+00:00",
+    "timestamp": "2026-10-26T17:44:44.627664+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -2901,7 +2901,7 @@
   },
   "gpt-4.1-mini-2025-04-14": {
     "model": "gpt-4.1-mini-2025-04-14",
-    "timestamp": "2026-10-25T15:08:06.340700+00:00",
+    "timestamp": "2026-10-26T17:44:44.627671+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -2937,7 +2937,7 @@
   },
   "gpt-4.1-nano-2025-04-14": {
     "model": "gpt-4.1-nano-2025-04-14",
-    "timestamp": "2026-10-25T15:08:06.340723+00:00",
+    "timestamp": "2026-10-26T17:44:44.627677+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -2973,7 +2973,7 @@
   },
   "gpt-4o-2024-08-06": {
     "model": "gpt-4o-2024-08-06",
-    "timestamp": "2026-10-25T15:08:06.340743+00:00",
+    "timestamp": "2026-10-26T17:44:44.627691+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -3009,7 +3009,7 @@
   },
   "gpt-4o-mini-2024-07-18": {
     "model": "gpt-4o-mini-2024-07-18",
-    "timestamp": "2026-10-25T15:08:06.340755+00:00",
+    "timestamp": "2026-10-26T17:44:44.627697+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -3045,7 +3045,7 @@
   },
   "davinci-002": {
     "model": "davinci-002",
-    "timestamp": "2026-10-25T15:08:06.341078+00:00",
+    "timestamp": "2026-10-26T17:44:44.627867+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
@@ -3078,7 +3078,7 @@
   },
   "babbage-002": {
     "model": "babbage-002",
-    "timestamp": "2026-10-25T15:08:06.341213+00:00",
+    "timestamp": "2026-10-26T17:44:44.627940+00:00",
     "tiers": {
       "standard": {
         "category": "fine_tuning",
